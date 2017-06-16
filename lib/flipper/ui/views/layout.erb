@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="<%= script_name %>/octicons/octicons.css">
     <link rel="stylesheet" href="<%= script_name %>/css/application.css">
+    <% if Flipper::UI.environment_header %>
+        <link rel="stylesheet" href="<%= Flipper::UI.environment_header %>">
+    <% end %>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -16,6 +19,9 @@
     <![endif]-->
   </head>
   <body>
+      <% if Flipper::UI.environment_header %>
+          <h2 class="environment-header container <%= Rails.env %>"> <%= Rails.env %></h2>
+      <% end %>
     <div class="container header">
       <%- if Flipper::UI.feature_creation_enabled -%>
         <a class="btn btn-sm right" href="<%= script_name %>/features/new">Add Feature</a>

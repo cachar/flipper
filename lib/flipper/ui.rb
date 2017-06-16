@@ -25,6 +25,11 @@ module Flipper
       # set to false, users of the UI cannot create features. All feature
       # creation will need to be done through the conigured flipper instance.
       attr_accessor :feature_creation_enabled
+
+      # Public: If you set this to something truthy, the environment will be
+      # displayed. If you set it to a path to a stylesheet, you can set custom
+      # styles for each environment and .environment-header.
+      attr_accessor :environment_header
     end
 
     self.feature_creation_enabled = true
