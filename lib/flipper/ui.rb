@@ -26,9 +26,8 @@ module Flipper
       # creation will need to be done through the conigured flipper instance.
       attr_accessor :feature_creation_enabled
 
-      # Public: If you set this to something truthy, the environment will be
-      # displayed. If you set it to a path to a stylesheet, you can set custom
-      # styles for each environment and .environment-header.
+      # Public: If you set this to a path to a stylesheet, you can set custom
+      # styles for .environment-header and each environment as its own class.
       attr_accessor :environment_header
     end
 

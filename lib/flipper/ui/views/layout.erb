@@ -19,9 +19,9 @@
     <![endif]-->
   </head>
   <body>
-      <% if Flipper::UI.environment_header %>
-          <h2 class="environment-header container <%= Rails.env %>"> <%= Rails.env %></h2>
-      <% end %>
+    <div class="environment-header <%= Rails.env %>">
+      <h2 class="container"> <%= Rails.env.capitalize %></h2>
+    </div>
     <div class="container header">
       <%- if Flipper::UI.feature_creation_enabled -%>
         <a class="btn btn-sm right" href="<%= script_name %>/features/new">Add Feature</a>
